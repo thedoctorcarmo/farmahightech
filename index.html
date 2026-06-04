@@ -6,10 +6,10 @@
     <title>Farma High Tech | Helder Silva Carmo Junior</title>
     <style>
         :root {
-            --primary-light-green: #2ecc71; /* Verde claro moderno */
+            --primary-light-green: #2ecc71;
             --accent-green: #27ae60;
             --bg-white: #ffffff;
-            --bg-light: #f4f9f5; /* Fundo suave esverdeado */
+            --bg-light: #f4f9f5;
             --text-dark: #2c3e50;
             --text-muted: #7f8c8d;
             --border-color: #e2ebd5;
@@ -29,7 +29,6 @@
             min-height: 100vh;
         }
 
-        /* MENU LATERAL (SIDEBAR) - Clean White Style */
         aside {
             width: 320px;
             background: var(--bg-white);
@@ -50,16 +49,6 @@
             text-align: center;
             margin-bottom: 35px;
             width: 100%;
-        }
-
-        .profile-pic {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            border: 3px solid var(--primary-light-green);
-            object-fit: cover;
-            margin-bottom: 16px;
-            box-shadow: 0 8px 16px rgba(46, 204, 113, 0.15);
         }
 
         .profile-container h2 {
@@ -85,13 +74,12 @@
             line-height: 1.4;
         }
 
-        /* MENU DE NAVEGAÇÃO */
         .nav-menu {
             width: 100%;
             display: flex;
             flex-direction: column;
             gap: 12px;
-            margin-top: auto; /* Empurra os botões para o rodapé do menu */
+            margin-top: auto;
         }
 
         .nav-btn {
@@ -109,14 +97,7 @@
             transition: all 0.25s ease;
         }
 
-        .nav-btn img {
-            width: 20px;
-            height: 20px;
-            object-fit: contain;
-            vertical-align: middle;
-        }
-
-        .nav-btn:hover {
+        .nav-btn:hover, .nav-btn.active {
             background: var(--bg-white);
             border-color: var(--primary-light-green);
             color: var(--accent-green);
@@ -124,7 +105,6 @@
             box-shadow: 0 6px 12px rgba(46, 204, 113, 0.1);
         }
 
-        /* ÁREA DE CONTEÚDO PRINCIPAL */
         main {
             margin-left: 320px;
             flex: 1;
@@ -132,23 +112,18 @@
             max-width: 1200px;
         }
 
-        /* 🖼️ CONTAINER DO SEU NOVO WALLPAPER / BANNER DE FRENTE */
         .banner-container {
             width: 100%;
-            min-height: 380px; /* Altura ideal para o seu wallpaper se destacar */
+            min-height: 380px;
             background: var(--bg-white);
             border: 1px solid var(--border-color);
             border-radius: 24px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
             margin-bottom: 40px;
             overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             position: relative;
         }
 
-        /* Substitua o 'src' abaixo pelo link real da sua imagem quando subir no repositório */
         .banner-container img {
             width: 100%;
             height: 100%;
@@ -158,23 +133,11 @@
             left: 0;
         }
 
-        /* Texto reserva caso a imagem demore para carregar */
-        .banner-placeholder-text {
-            color: var(--text-muted);
-            font-weight: 500;
-            font-size: 1.1rem;
-            z-index: 1;
-        }
-
-        /* SEÇÃO DOS PILARES ATUAIS */
         .section-title {
             font-size: 1.75rem;
             font-weight: 700;
             color: var(--text-dark);
             margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
         .grid-pilares {
@@ -217,7 +180,6 @@
             line-height: 1.5;
         }
 
-        /* Responsividade para telas mobile */
         @media (max-width: 900px) {
             body { flex-direction: column; }
             aside { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid var(--border-color); padding: 30px 20px; }
@@ -229,75 +191,58 @@
 </head>
 <body>
 
-    <!-- MENU LATERAL (SIDEBAR) -->
+    <!-- MENU LATERAL -->
     <aside>
         <div class="profile-container">
-            <!-- Foto de perfil vinculada ao seu repositório ou link externo -->
-            
             <h2>Helder Silva Carmo Junior</h2>
             <p>Farmacêutico Clínico</p>
-            <div class="profile-subtext">SUS (SPDM) em Fortaleza<br>Analista de Dados & Programador<br>
-            Desenvolvedor e Consultor de Sistemas em Saúde</div>
+            <div class="profile-subtext">
+                SUS (SPDM) em Fortaleza<br>
+                Analista de Dados & Programador<br>
+                Desenvolvedor e Consultor de Sistemas em Saúde
+            </div>
         </div>
 
-        <!-- Botões de Navegação (Parte Inferior com Imagens das Plataformas) -->
         <nav class="nav-menu">
-            <a href="#" class="nav-btn">🏠 Início</a>
-            <a href="#" class="nav-btn">✨ Ferramentas</a>
-            <a href="#" class="nav-btn">🧪 Discursões</a>
-            <a href="https://linkedin.com" target="_blank" class="nav-btn">
-                👔 LinkedIn
-            </a>
-            <a href="https://instagram.com" target="_blank" class="nav-btn">
-                📱 Instagram
-            </a>
+            <a href="index.html" class="nav-btn active">🏠 Início</a>
+            <a href="ferramentas.html" class="nav-btn">✨ Ferramentas</a>
+            <a href="#" class="nav-btn">🧪 Discussões</a>
+            <a href="https://linkedin.com" target="_blank" class="nav-btn">👔 LinkedIn</a>
+            <a href="https://instagram.com" target="_blank" class="nav-btn">📱 Instagram</a>
             <a href="#" class="nav-btn">🎓 A Casa do Farmacêutico</a>
         </nav>
     </aside>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
-        
-        <!-- 🖼️ ESPAÇO DO SEU WALLPAPER PRINCIPAL (BANNER) -->
         <div class="banner-container">
-            <!-- Quando tiver o link da sua nova imagem, cole no 'src' abaixo -->
-            <img src="wallpaper.png" alt="">
-            <span class="banner-placeholder-text"></span>
+            <img src="wallpaper.png" alt="Wallpaper Farma High Tech">
         </div>
 
-        <!-- SEÇÃO: ÁREAS DE ATUAÇÃO (Modelado do seu site antigo) -->
         <h2 class="section-title">🔬 Áreas de Atuação & Discussão</h2>
         
         <div class="grid-pilares">
-            <!-- Pilar 1 -->
             <div class="card-pilar">
                 <span class="card-icon">💊</span>
                 <h3>Farmácia Avançada</h3>
                 <p>A evolução do profissional farmacêutico no ecossistema digital, focado em alta performance clínica.</p>
             </div>
-
-            <!-- Pilar 2 -->
             <div class="card-pilar">
                 <span class="card-icon">🤖</span>
                 <h3>Inteligência Artificial</h3>
                 <p>Algoritmos computacionais aplicados à triagem virtual de moléculas e descoberta acelerada de fármacos.</p>
             </div>
-
-            <!-- Pilar 3 -->
             <div class="card-pilar">
                 <span class="card-icon">🧬</span>
                 <h3>Bioengenharia</h3>
                 <p>O futuro da terapêutica com engenharia de tecidos, órgãos em chips e biomateriais inovadores.</p>
             </div>
-
-            <!-- Pilar 4 -->
             <div class="card-pilar">
                 <span class="card-icon">🔌</span>
                 <h3>Eletrônica & Hardware</h3>
                 <p>Desenvolvimento e integração de dispositivos médicos, sensores vestíveis e automação laboratorial.</p>
             </div>
         </div>
-
     </main>
 
 </body>
